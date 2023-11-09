@@ -1,12 +1,12 @@
 import { Header } from '@components/Header';
-import { StatusBar } from 'expo-status-bar';
-import {Text, View } from 'react-native';
+import { Highlight } from '@components/Highlights';
+import {View } from 'react-native';
 
 export function Groups() {
   return (
     <View className="flex-1 bg-background-black">
-      <Header  />
-
+      <Header />
+      <Highlight title='Turmas' subTitle='Jogue com sua turma'/>
     </View>
   );
 }
