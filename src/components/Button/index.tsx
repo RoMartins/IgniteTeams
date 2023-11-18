@@ -22,7 +22,7 @@ NativeWindStyleSheet.create({
 export function ButtonComponent({type, title, ...props} : ButtonProps){
   return(
     
-      <TouchableOpacity {...props} className={` flex-1 m-2 min-h-[56px] max-h-14 ${type} rounded-md justify-center items-center`}>
+      <TouchableOpacity {...props} className={` flex-1 min-h-[56px] max-h-14 ${type} rounded-md justify-center items-center`}>
         <Text className="text-sm text-[#fff] font-bold_roboto">
         {title}
         </Text>

@@ -9,7 +9,7 @@ import { ButtonComponent } from '@components/Button';
 export function Groups() {
   const [ groups, SetGroups] = useState([])
   return (
-    <View className="flex-1 bg-background-black">
+    <View className="flex-1 bg-[#202024] p-6 ">
       <Header />
       <Highlight title='Turmas' subTitle='Jogue com sua turma'/>
 

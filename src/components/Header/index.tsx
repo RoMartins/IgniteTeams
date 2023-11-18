@@ -9,7 +9,7 @@ interface HeaderProps {
 
 export function Header({showHeaderArrowButton = false}: HeaderProps) {
   return (
-    <View className="mt-12 w-full items-center flex-row justify-center">
+    <View className="mt-6 w-full items-center flex-row justify-center">
       {
         showHeaderArrowButton && 
         <TouchableOpacity className="flex-1">
@@ -17,7 +17,7 @@ export function Header({showHeaderArrowButton = false}: HeaderProps) {
         </TouchableOpacity>
       }
      
-      <Image className="w-12 h-14" source={logo}/>
+      <Image className="w-12 h-14 " source={logo}/>
     </View>
   )
 }
