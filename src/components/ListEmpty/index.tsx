@@ -12,4 +12,4 @@ export function ListEmpty({message}: CardEmptyProps){
       </Text>
     </View>
   )
-}
+} 
