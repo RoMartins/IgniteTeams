@@ -3,9 +3,11 @@
 module.exports = {
   content: ["./App.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
-      extend: {
-        colors: {
+      extend: { 
+       colors: {
           'background-black': '#000',
+          'green-700': '#00875F',
+          'gray-700': "#121214"
         },
 
         fontFamily: {

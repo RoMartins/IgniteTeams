@@ -2,6 +2,7 @@ import {Groups} from '@screens/Groups'
 import {useFonts, Roboto_400Regular, Roboto_700Bold} from '@expo-google-fonts/roboto'
 import { LoadingIndicator } from '@components/Loading';
 import { StatusBar } from 'react-native';
+import { NewGroup } from '@screens/NewGroup';
 
 
 export default function App() {
@@ -19,7 +20,7 @@ export default function App() {
     backgroundColor="transparent"
     translucent
     />
-    {fontsLoaded ? <Groups /> : <LoadingIndicator />}
+    {fontsLoaded ? <NewGroup /> : <LoadingIndicator />}
     </>
   );
 }
