@@ -15,7 +15,7 @@ export function NewGroup() {
         <UsersThree size={56} color="#00875F" style={{alignSelf: "center"}}/>
         <Highlight title="Nova turma" subTitle="crie a turma para adicionar pessoas"/>
 
-          <InputComponent />
+          <InputComponent placeholder="Nome da turma"/>
 
         <ButtonComponent title="Criar" type="primary" className="mt-5"/>
       </View>
