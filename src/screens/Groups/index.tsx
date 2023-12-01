@@ -5,9 +5,14 @@ import {FlatList, View } from 'react-native';
 import {ListEmpty } from '@components/ListEmpty';
 import { GroupCard } from '@components/GroupCard';
 import { ButtonComponent } from '@components/Button';
+import { useNavigation } from '@react-navigation/native';
 
 export function Groups() {
   const [ groups, SetGroups] = useState([])
+  const navagation = useNavigation()
+  function handleNewGroup() {
+    navagation.navigate('new')
+  }
   return (
     <View className="flex-1 bg-[#202024] p-6 ">
       <Header />
@@ -25,7 +30,7 @@ export function Groups() {
       )}
       />
 
-      <ButtonComponent title='Criar nova turma' type='primary'/>
+      <ButtonComponent title='Criar nova turma' type='primary' onPress={handleNewGroup}/>
     </View>
   );
 }
