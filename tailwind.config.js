@@ -7,7 +7,8 @@ module.exports = {
        colors: {
           'background': '#202024',
           'green-700': '#00875F',
-          'gray-700': "#121214"
+          'gray-700': "#121214",
+          'gray-500': "#29292E"
         },
 
         fontFamily: {

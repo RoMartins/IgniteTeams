@@ -1,8 +1,11 @@
+import { ButtonComponent } from "@components/Button";
 import { ButtonIcon } from "@components/ButtonIcon";
 import { Filter } from "@components/Filter";
 import { Header } from "@components/Header";
 import { Highlight } from "@components/Highlights";
 import { InputComponent } from "@components/Input";
+import { ListEmpty } from "@components/ListEmpty";
+import { PlayerCard } from "@components/PlayerCard";
 import { useState } from "react";
 import { FlatList, Text, View } from "react-native";
 
@@ -33,10 +36,33 @@ export function Players() {
           )}
         horizontal
       />
-    <Text className="text-gray-200 font-bold_roboto text-sm">
+      <Text className="text-gray-200 font-bold_roboto text-sm">
        {players.length}
-    </Text>
-          </View>
+      </Text>
+    </View>
+
+    <FlatList 
+        data={players}
+        keyExtractor={item => item}
+        renderItem={({item}) => (
+          <PlayerCard  
+          name={item} 
+          onRemove={() => {}}
+          />
+          )}
+
+          ListEmptyComponent={() => (
+            <ListEmpty message="Não há pessoas nesse time"/>
+          )}
+
+          showsVerticalScrollIndicator= {false}
+          contentContainerStyle={[
+            {paddingBottom:100},
+            players.length === 0 && {flex:1}
+          ]}
+      />
+
+      <ButtonComponent title="Remover Turma" type="secondary"/>
     </View>
   )
 }

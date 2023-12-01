@@ -7,17 +7,7 @@ interface ButtonIconProps extends TouchableOpacityProps {
   icon: keyof typeof MaterialIcons.glyphMap;
 }
 
-NativeWindStyleSheet.create({
- styles: {
-  primary: {
-    color: '#00875F'
-  },
-  secondary: {
-    backgroundColor: '#AA2834'
 
-  }
- }
-});
 export function ButtonIcon({icon, type = 'primary', ...rest}: ButtonIconProps){
   return (
     <TouchableOpacity className={`ml-3 items-center justify-center w-14 h-14 `}>
